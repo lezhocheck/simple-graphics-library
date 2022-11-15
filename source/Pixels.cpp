@@ -60,16 +60,16 @@ const Color& Pixels::get(size_t x, size_t y) const {
 }
 
 Pixels::Pixels(const Pixels &other) :
-        imageHeight(other.imageHeight),
-        imageWidth(other.imageWidth) {
+        imageWidth(other.imageWidth),
+        imageHeight(other.imageHeight) {
 
     colors = new Color[imageHeight * imageWidth];
     std::copy_n(other.colors, imageHeight * imageWidth, colors);
 }
 
 Pixels::Pixels(Pixels &&other) noexcept :
-               imageHeight(other.imageHeight),
-               imageWidth(other.imageWidth) {
+               imageWidth(other.imageWidth),
+               imageHeight(other.imageHeight) {
     other.imageHeight = 0;
     other.imageWidth = 0;
     colors = other.colors;
