@@ -6,7 +6,7 @@
 namespace sglib {
     class Pixels {
     public:
-        Pixels() : imageHeight(0), imageWidth(0), colors(nullptr) { }
+        Pixels() : imageWidth(0), imageHeight(0), colors(nullptr) { }
         Pixels(size_t width, size_t height);
         Pixels(size_t width, size_t height, const Color& color);
         Pixels(const Pixels& other);
